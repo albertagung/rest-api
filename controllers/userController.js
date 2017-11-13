@@ -33,7 +33,7 @@ let createNewUser = function(req,res){
       role: req.body.role
     }
   ).then(function(){
-    res.send(`${req.body.first_name} ${req.body.last_name} has been added`)
+    res.send(`${req.body.first_name} ${req.body.last_name} has been added as ${req.body.role}`)
   }).catch(function(err){
     res.send(err)
   })
@@ -59,13 +59,14 @@ let editUserById = function(req,res){
       first_name: req.body.first_name,
       last_name: req.body.last_name,
       username: req.body.username,
-      password: req.body.password,
       role: req.body.role
     },
     {
       where: {id: req.params.id}
     }
-  ).then(function(){}).then(function(err){
+  ).then(function(rowsUpdateUsers){
+    res.send(rowsUpdateUsers)
+  }).then(function(err){
     res.send(err)
   })
 }

@@ -21,6 +21,10 @@ app.use(morgan('dev', {
 // Routes
 let users = require('./routes/userRouter.js')
 app.use('/api/users',users)
+let login = require('./routes/loginRouter.js')
+app.use('/api/login',login)
+let signup = require('./routes/signupRouter.js')
+app.use('/api/signup',signup)
 
 // Listening server
 app.listen(3000, () => console.log('Example app listening on port SACENG!'))
