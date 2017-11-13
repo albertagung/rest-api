@@ -1,0 +1,29 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "REST API, documentation with markdown, securing API with JWT",
+  "main": "app.js",
+  "scripts": {
+    "test"  : "echo \"Error: no test specified\" && exit 1",
+    "start" : "node app.js",
+    "dev"   : "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertagung/rest-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albertagung/rest-api/issues"
+  },
+  "homepage": "https://github.com/albertagung/rest-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.0",
+    "qs": "^6.5.1",
+    "sequelize": "^4.22.6"
+  }
+}
