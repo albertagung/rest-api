@@ -1,3 +1,4 @@
+require('dotenv').config()
 let model = require('../models')
 let getMatch = require('../helper/getMatch.js')
 let jwt = require('jsonwebtoken')
@@ -17,7 +18,7 @@ let getLogin = function(req,res,next){
           username: rowsUser[0].username,
           role:rowsUser[0].role
         },
-        'hahaha',
+        process.env.SECRET_KEY,
         function(err,token){
           if(err){
             res.send(err)
@@ -38,7 +39,7 @@ let getLogin = function(req,res,next){
 let verifyLogin = function(req,res,next){
   jwt.verify(
     req.header.token,
-    'hahaha',
+    process.env.SECRET_KEY,
     function(err,decoded){
       if(err){
         res.send(err)

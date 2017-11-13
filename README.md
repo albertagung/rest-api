@@ -7,7 +7,7 @@ Demo app with basic REST API
 REST API
 List of basic routes:
 
-||______ROUTES_______||_______HTTP_______||_________________Description_____________                        ||
+||______ROUTES_______||_______HTTP_______||______________________________Description________________________||
 || /api/signup       ||       Post       ||  Sign Up with new user info                                     ||
 || /api/signin       ||       POST       ||  Sign In while get an access token while based on credentials   ||
 || /api/users        ||       GET        ||  Get all the users                                              ||
